@@ -1,0 +1,94 @@
+:root {
+    --background-color: #4256B9;
+    --second-color: #AD8DF2;
+    --text-color:  #eee;
+    --cell-color-red: #fc7c78;
+    --cell-color-green: #bfe290;
+    --cell-color-yellow: #ffe196;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-size: 24px;
+    font-family: 'Poppins';
+}
+
+button {
+    font-size: 24px;
+    color: var(--text-color);
+    border: none;
+}
+
+button:disabled {
+    background-color: gray;
+}
+
+button:disabled:hover {
+    background-color: gray;
+}
+
+h2, h3 {
+    font-weight: 400;
+}
+
+ul {
+    padding: 0;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color)
+}
+
+p {
+    margin: 0;
+}
+
+.btn {
+    width: 100%;
+    margin: 0 0 30px 0;
+    text-align: center;
+    background-color: transparent;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid var(--text-color);
+    border-radius: 0px;
+
+    /* transition: all ease 0.4s; */
+    transition: width ease 0.4s;
+}
+
+.btn:hover {
+    width: 70%;
+    border-radius: 40px;
+    /* transition: all ease 0.4s; */
+    transition: width ease 0.4s;
+}
+
+.btn[disabled] {
+    background-color: #b9b9b9;
+}
+
+.btn[disabled]:hover {
+    background-color: #b9b9b9;
+}
