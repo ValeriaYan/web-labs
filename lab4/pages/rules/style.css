@@ -1,0 +1,67 @@
+@import url(../../styles/common.css);
+@import url(../../styles/header.css);
+@import url(../../styles/footer.css);
+@import url(../../styles/wrapper.css);
+
+.main {
+    position: relative;
+    height: 100%;
+    top: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.main__rules,
+.main__notation {
+    max-width: 1360px;
+    padding: 20px 0;
+}
+
+.title,
+.subtitle {
+    text-align: center;
+}
+
+.subtitle {
+    color: var(--cell-color-yellow);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin: 0 0 20px 0;
+}
+
+.row_accent {
+    color: var(--cell-color-green);
+}
+
+.row_accent-red {
+    color: var(--cell-color-red);
+}
+
+.row__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row__img-board {
+    width: 400px;
+    height: 400px;
+}
+
+.row__img-checker {
+    width: 100px;
+    height: 100px;
+    margin: 0 50px 0 0;
+}
+
+.row__img-move {
+    width: 300px;
+    height: 300px;
+}
