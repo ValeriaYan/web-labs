@@ -10,7 +10,7 @@
 
 .wrapper::after {
     z-index: -2;
-    background-image: url(../../assets/26399-b58ef8.png);
+    background-image: url(../../background.png);
 }
 
 .wrapper::before {
