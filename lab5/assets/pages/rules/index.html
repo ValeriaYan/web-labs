@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <title>Checkers</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container container">
+          <a href="../../pages/start/index.html" class="header__logo">
+            <svg width="50px" height="50px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><defs><style>.a{fill:none;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;}</style></defs><circle class="a" cx="14.8" cy="14.9" r="6.7"/><path class="a" d="M24,42.5V5.5"/><path class="a" d="M5.5,24.1h37"/><circle class="a" cx="14.8" cy="14.9" r="3.8"/><rect class="a" x="5.5" y="5.5" width="37" height="37"/></svg>
+          </a>
+          <div class="header__nav">
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="../../pages/rules/index.html">Rules</a></li>
+                <li class="nav__item">
+                  <a href="../../pages/game/index.html">Game</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="main__container container">
+          <div class="main__rules rules">
+            <h2 class="rules__title title">Game Rules</h2>
+            <div class="rules__row row">
+              <div class="row__text">
+                <p>The playing field is a square board measuring 8x8 cells, similar to a chess board. Verticals (columns) are designated by Latin letters from a to h, and horizontals (rows) by numbers from 1 to 8. Unlike chess, not all fields are considered game, but only dark fields</p>
+                <p>Each side has 12 checkers at the beginning of the game. The checkers are placed on the three horizontal lines closest to the players. In particular, white checkers are located on squares a1, c1, e1, g1, b2, d2, f2, h2, a3, c3, e3 and g3, and black checkers, respectively, on squares h8, f8, d8, b8, g7, e7 , c7, a7, h6, f6, d6 and b6. The two central rows of fields remain free.</p>
+              </div>
+              <div class="row__img">
+                <img class="row__img-board" src="../../assets/board.jpg" alt="">
+              </div>
+            </div>
+            <p class="rules__row row">Opponents take turns moving checkers of their color across the playing fields.</p>
+            <p class="rules__row row">Whites start first. Situations that arise on the board are called positions. The game played from beginning to end is called a game, and the movements of the checkers are called moves.</p>
+            <p class="rules__row row row_accent">The side that manages to destroy or block the movement of all the opponent's checkers wins.</p>
+            <h3 class="rules__subtitle subtitle">Simple checkers</h3>
+            <div class="rules__row row">
+                <p>At the beginning of the game all checkers are simple</p>
+              <div class="row__img">
+                <img class="row__img-checker" src="../../assets/checker__black.png" alt="">
+                <img class="row__img-checker" src="../../assets/checker__white.png" alt="">
+              </div>
+            </div>
+            <p class="rules__row row">A simple checker can make, depending on the position, types of moves: quiet and impact</p>
+            <div class="rules__row row">
+              <div class="row__text">
+                <p><span class="row_accent">Quiet move</span> - moving one field forward diagonally. A quiet move is possible if the corresponding square is free and there is no need to capture the opponent’s checker anywhere on the board. For example, the correct move from the initial position would be to move a checker from square c3, for example to d4 (in the game notation this is denoted as c3-d4), or to b4 (c3-b4).</p>
+              </div>
+              <div class="row__img row__img-vertical">
+                <img class="row__img-move" src="../../assets/quiet-move.jpg" alt="">
+              </div>        
+            </div>
+            <div class="rules__row row">
+              <div class="row__text">
+                <p><span class="row_accent-red">Impact move</span>(fighting an opponent's checker) - moving two squares forward or backward diagonally, through the opponent's checker. During its move, a checker must capture (capture) the opponent’s checker if it is on an adjacent (diagonally) field and if the next field behind it is free. The taking checker stands on this free field, jumping over the enemy checker, which is removed from the board. Taking can be done not only forward, but also backward.</p>
+              </div>
+              <div class="row__img row__img-vertical">
+                <img class="row__img-move" src="../../assets/impact-move.jpg" alt="">
+              </div>  
+            </div>
+            <div class="rules__row row">If, after capturing one checker, it turns out to be possible to capture another opponent’s checker, the capture continues, that is, in one move (in one move), the checker must capture as many of the opponent’s checkers as there are in its path. Captures in Russian checkers are mandatory.</div>
+            <h3 class="rules__subtitle subtitle">Queens checkers</h3>
+            <div class="rules__row row">
+              <div class="row__text">If a simple checker reaches the last rank, it becomes a king. Queens, unlike ordinary checkers, are able to move an arbitrary number of squares along a selected diagonal, both forward and backward.</div>
+              <div class="row__img">
+                <img class="row__img-checker" src="../../assets/checker__black-queen.png" alt="">
+                <img class="row__img-checker" src="../../assets/checker__white-queen.png" alt="">
+              </div>
+            </div>
+            <div class="rules__row row">
+              <div class="row__text">
+                <p>During its move, the queen is obliged to take the opponent's checker (both forward and backward) regardless of the number of free fields before it, unless this checker is on the same diagonal with the king and there are one or more free fields behind this checker.</p>
+                <p>If, during a capture, there are also opponent’s checkers on any of the intersecting diagonals, behind which there are free squares, then the queen is obliged to continue capturing these checkers, no matter how many of them are on her way.</p>
+              </div>
+              <div class="row__img">
+                <img class="row__img-move" src="../../assets/queen-move.jpg" alt="">
+              </div>
+            </div>
+            <div class="rules__row row">If an ordinary checker reaches the last horizontal line as a result of a battle with an enemy checker (where it is supposed to turn into a king), and if it is given the opportunity to further capture enemy checkers, then it is obliged to continue the battle with the same move, but as a king.
+            </div>
+            <div class="rules__row row">
+              <div class="row__text">
+                <span class="row_accent-red">Please note: </span>this rule only applies if the checker reaches the last horizontal line as a result of a striking move. If a simple checker reaches the last row without being captured and is then given the opportunity to fight, then it must hit (if such an opportunity remains) only on the next move
+              </div>
+            </div>
+          </div>
+          <div class="main__notation notation">
+            <h2 class="notation__title title">Checkers Notation</h2>
+            <div class="notation__row row">
+              <div class="row__text">
+                <p>To record the move of a checker, first indicate the field on which it stood, and then, separated by a hyphen <span class="row_accent">(“‑”)</span>, indicate the field on which the checker is placed. <span class="row_accent">Example of a move: c3-d4.</span></p>
+                <p>
+                  To record a take, use a colon <span class="row_accent">(“:”)</span> instead of a hyphen.
+                  <span class="row_accent">An example of a capture: b6:d4.</span>
+                </p>
+              </div>
+              <div class="row__img">
+                <img src="../../assets/notation.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container container">
+          <div class="footer__copy">&copy;Valeria Yanycheva</div>
+          <div class="footer__email">
+            Email:
+            <a href="mailto:valeria.yanycheva@gmail.com">valeria.yanycheva@gmail.com</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

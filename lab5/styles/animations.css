@@ -1,0 +1,87 @@
+@keyframes go-top-right-cell {
+    from { 
+        left: 40px;
+        top: 40px 
+    }
+    to { 
+        left: 120px;
+        top: -40px;
+    }
+}
+
+@keyframes go-two-top-right-cell {
+    from { 
+        left: 40px;
+        top: 40px 
+    }
+    to { 
+        left: 200px;
+        top: -120px;
+    }
+}
+
+@keyframes go-top-left-cell {
+    from { 
+        left: 40px;
+        top: 40px 
+    }
+    to { 
+        left: -40px;
+        top: -40px;
+    }
+}
+
+@keyframes go-two-top-left-cell {
+    from { 
+        left: 40px;
+        top: 40px 
+    }
+    to { 
+        left: -120px;
+        top: -120px;
+    }
+}
+
+@keyframes go-bottom-left-cell {
+    from { 
+        left: 40px;
+        top: 40px 
+    }
+    to { 
+        left: -40px;
+        top: 120px;
+    }
+}
+
+@keyframes go-two-bottom-left-cell {
+    from { 
+        left: 40px;
+        top: 40px 
+    }
+    to { 
+        left: -120px;
+        top: 200px;
+    }
+}
+
+@keyframes go-bottom-right-cell {
+    from { 
+        left: 40px;
+        top: 40px 
+    }
+    to { 
+        left: 120px;
+        top: 120px;
+    }
+}
+
+@keyframes go-two-bottom-right-cell {
+    from { 
+        left: 40px;
+        top: 40px 
+    }
+    to { 
+        left: 200px;
+        top: 200px;
+    }
+}

@@ -1,0 +1,16 @@
+export const HTMLElements = {
+    htmlBoard: document.querySelector('.board'),
+    htmlCells: document.querySelectorAll('.board__cell'),
+    htmlCurrentPlayer: document.querySelector('.main__player'),
+    winnerBlock: document.querySelector('.winner'),
+    overlay: document.querySelector('.overlay'),
+    newGameBtn: document.querySelector('.main__start-btn'),
+    exampleBtn: document.querySelector('.main__example-btn'),
+    completeMoveBtn: document.querySelector('.main__complete-btn'),
+    cancelMoveBtn: document.querySelector('.main__cancel-btn'),
+    notationBlock: document.querySelector('.main__notation'),
+    notationError: document.querySelector('.main__notation .error'),
+    textarea: document.querySelector('.notation'),
+    showBoardBtn: document.querySelector('.notation__show-btn'),
+    copyNotationBtn: document.querySelector('.notation__copy-btn'),
+} 

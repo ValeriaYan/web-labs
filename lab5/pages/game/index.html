@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <title>Checkers</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container container">
+          <a href="../../index.html" class="header__logo">
+            <svg width="50px" height="50px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><defs><style>.a{fill:none;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;}</style></defs><circle class="a" cx="14.8" cy="14.9" r="6.7"/><path class="a" d="M24,42.5V5.5"/><path class="a" d="M5.5,24.1h37"/><circle class="a" cx="14.8" cy="14.9" r="3.8"/><rect class="a" x="5.5" y="5.5" width="37" height="37"/></svg>
+          </a>
+          <div class="header__nav">
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="../rules/index.html">Rules</a></li>
+                <li class="nav__item">
+                  <a href="#">Game</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="main__container container">
+            <div class="main__notation">
+              <textarea class="notation" name="notation" cols="30" rows="25" readonly></textarea>
+              <div class="notation__buttons">
+                <div class="notation__copy-btn btn">Copy notation</div>
+                <div class="notation__show-btn btn">Paste and show</div>
+                <div class="error"></div>
+              </div>
+            </div>
+            <div class="main__board board">
+                <table class="board__table">
+                    <thead>
+                        <th></th>
+                        <th>A</th>
+                        <th>B</th>
+                        <th>C</th>
+                        <th>D</th>
+                        <th>E</th>
+                        <th>F</th>
+                        <th>G</th>
+                        <th>H</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>8</td>
+                            <td class="board__cell" data-col="0" data-row="0"></td>
+                            <td class="board__cell board__cell_dark" data-col="1" data-row="0"></td>
+                            <td class="board__cell" data-col="2" data-row="0"></td>
+                            <td class="board__cell board__cell_dark" data-col="3" data-row="0"></td>
+                            <td class="board__cell" data-col="4" data-row="0"></td>
+                            <td class="board__cell board__cell_dark" data-col="5" data-row="0"></td>
+                            <td class="board__cell" data-col="6" data-row="0"></td>
+                            <td class="board__cell board__cell_dark" data-col="7" data-row="0"></td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td class="board__cell board__cell_dark" data-col="0" data-row="1"></td>
+                            <td class="board__cell" data-col="1" data-row="1"></td>
+                            <td class="board__cell board__cell_dark" data-col="2" data-row="1"></td>
+                            <td class="board__cell" data-col="3" data-row="1"></td>
+                            <td class="board__cell board__cell_dark" data-col="4" data-row="1"></td>
+                            <td class="board__cell" data-col="5" data-row="1"></td>
+                            <td class="board__cell board__cell_dark" data-col="6" data-row="1"></td>
+                            <td class="board__cell" data-col="7" data-row="1"></td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td class="board__cell" data-col="0" data-row="2"></td>
+                            <td class="board__cell board__cell_dark" data-col="1" data-row="2"></td>
+                            <td class="board__cell" data-col="2" data-row="2"></td>
+                            <td class="board__cell board__cell_dark" data-col="3" data-row="2"></td>
+                            <td class="board__cell" data-col="4" data-row="2"></td>
+                            <td class="board__cell board__cell_dark" data-col="5" data-row="2"></td>
+                            <td class="board__cell" data-col="6" data-row="2"></td>
+                            <td class="board__cell board__cell_dark" data-col="7" data-row="2"></td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td class="board__cell board__cell_dark" data-col="0" data-row="3"></td>
+                            <td class="board__cell" data-col="1" data-row="3"></td>
+                            <td class="board__cell board__cell_dark" data-col="2" data-row="3"></td>
+                            <td class="board__cell" data-col="3" data-row="3"></td>
+                            <td class="board__cell board__cell_dark" data-col="4" data-row="3"></td>
+                            <td class="board__cell" data-col="5" data-row="3"></td>
+                            <td class="board__cell board__cell_dark" data-col="6" data-row="3"></td>
+                            <td class="board__cell" data-col="7" data-row="3"></td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td class="board__cell" data-col="0" data-row="4"></td>
+                            <td class="board__cell board__cell_dark" data-col="1" data-row="4"></td>
+                            <td class="board__cell" data-col="2" data-row="4"></td>
+                            <td class="board__cell board__cell_dark" data-col="3" data-row="4"></td>
+                            <td class="board__cell " data-col="4" data-row="4"></td>
+                            <td class="board__cell board__cell_dark" data-col="5" data-row="4"></td>
+                            <td class="board__cell" data-col="6" data-row="4"></td>
+                            <td class="board__cell board__cell_dark" data-col="7" data-row="4"></td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td class="board__cell board__cell_dark" data-col="0" data-row="5"></td>
+                            <td class="board__cell" data-col="1" data-row="5"></td>
+                            <td class="board__cell board__cell_dark" data-col="2" data-row="5"></td>
+                            <td class="board__cell" data-col="3" data-row="5"></td>
+                            <td class="board__cell board__cell_dark" data-col="4" data-row="5"></td>
+                            <td class="board__cell" data-col="5" data-row="5"></td>
+                            <td class="board__cell board__cell_dark" data-col="6" data-row="5"></td>
+                            <td class="board__cell" data-col="7" data-row="5"></td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="board__cell" data-col="0" data-row="6"></td>
+                            <td class="board__cell board__cell_dark" data-col="1" data-row="6"></td>
+                            <td class="board__cell " data-col="2" data-row="6"></td>
+                            <td class="board__cell board__cell_dark" data-col="3" data-row="6"></td>
+                            <td class="board__cell" data-col="4" data-row="6"></td>
+                            <td class="board__cell board__cell_dark" data-col="5" data-row="6"></td>
+                            <td class="board__cell" data-col="6" data-row="6"></td>
+                            <td class="board__cell board__cell_dark" data-col="7" data-row="6"></td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td class="board__cell board__cell_dark" data-col="0" data-row="7"></td>
+                            <td class="board__cell" data-col="1" data-row="7"></td>
+                            <td class="board__cell board__cell_dark" data-col="2" data-row="7"></td>
+                            <td class="board__cell" data-col="3" data-row="7"></td>
+                            <td class="board__cell board__cell_dark" data-col="4" data-row="7"></td>
+                            <td class="board__cell" data-col="5" data-row="7"></td>
+                            <td class="board__cell board__cell_dark" data-col="6" data-row="7"></td>
+                            <td class="board__cell" data-col="7" data-row="7"></td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <th></th>
+                        <th>A</th>
+                        <th>B</th>
+                        <th>C</th>
+                        <th>D</th>
+                        <th>E</th>
+                        <th>F</th>
+                        <th>G</th>
+                        <th>H</th>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="main__controls">
+              <div class="main__current-player">
+                <p>Current player:</p>
+                <p class="main__player" data-player="white">white</p>
+              </div>
+              <div class="main__start-btn btn">New Game</div>
+              <div class="main__example-btn btn">Show Example</div>
+              <button class="main__complete-btn btn" disabled>Complete Move</button>
+              <button class="main__cancel-btn btn" disabled>Cancel Move</button>
+            </div>
+        </div>
+      </main>
+      <footer class="footer"></footer>
+      <div class="winner">
+        <div class="winner__player">white</div>
+        <p>won</p>
+      </div>
+      <div class="overlay"></div>
+    </div>
+    <script src="../../js/main.js" type="module"></script>
+  </body>
+</html>
