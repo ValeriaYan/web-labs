@@ -38,10 +38,14 @@ export class Notation {
         if(positions.length == 1) {
             positions = move.split(':');
         }
-        const startPosition = [this.vertical.indexOf(positions[0][1]), this.horizontal.indexOf(positions[0][0])];
-        const endPosition = [this.vertical.indexOf(positions[1][1]), this.horizontal.indexOf(positions[1][0])];
+
+        const indices = [];
+        for(let i = 0; i < positions.length; i++) {
+            const position = [this.vertical.indexOf(positions[i][1]), this.horizontal.indexOf(positions[i][0])];
+            indices.push(position);
+        }
         
-        return [startPosition, endPosition];
+        return indices;
     }
     
     setCurrentValues() {

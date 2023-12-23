@@ -43,13 +43,19 @@ export class Checkers {
         const checker = this.board.getBoard()[oldPosition[0]][oldPosition[1]];
         this.replacePositionChecker(oldPosition, newPosition);
         if(newPosition[0] == 0 && checker.getPlayer() == this.board.getPlayer1()) {
-            checker.setQueen();
+            checker.setQueen(true);
         }
         if(newPosition[0] == 7 && checker.getPlayer() == this.board.getPlayer2()) {
-            checker.setQueen();
+            checker.setQueen(true);
         }
 
         return this.checkDeletion(oldPosition, newPosition);
+    }
+
+    removeQueen(position) {
+        console.log(this.board.getBoard());
+        const checker = this.board.getBoard()[position[0]][position[1]];
+        checker.setQueen(false);
     }
 
     replacePositionChecker(oldPosition, newPosition) {

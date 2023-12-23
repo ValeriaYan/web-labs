@@ -60,6 +60,11 @@ export class View {
         checker.classList.add('queen');
     }
 
+    removeQueen(checker) {
+        checker.classList.contains('white') ? checker.src = '../../assets/checker__white.png' : checker.src = '../../assets/checker__black.png';
+        checker.classList.remove('queen');
+    }
+
     changeParentForChecker(oldCell, newCell, checker) {
         oldCell.classList.remove('checked');
         newCell.classList.add('checked');

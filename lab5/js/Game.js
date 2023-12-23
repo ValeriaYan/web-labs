@@ -47,18 +47,20 @@ export class Game {
     }
     
     startGameFromNotation() {
-        this.newGame();
+        // this.newGame();
         const textarea = HTMLElements.textarea;
         this.notation = new Notation(textarea);
-        this.checkers.fillBoard();
+        // this.checkers.fillBoard();
         let notationRows = textarea.value.split('\n');
         notationRows = notationRows.filter((row) => row !== '');
         try{
             for(let i = 0; i < notationRows.length; i++) {
                 const positions = this.notation.turnNotationRowInPositions(notationRows[i]);
-                const notationPositions = [this.notation.turnIndicesInPositionOnBoard(positions[0]), this.notation.turnIndicesInPositionOnBoard(positions[1])]
-                this.checkers.checkMove(positions[0], positions[1], notationRows[i], notationPositions);
-                this.checkers.moveChecker(positions[0], positions[1], );
+                for(let i = 0; i < positions.length - 1; i++) {
+                    const notationPositions = [this.notation.turnIndicesInPositionOnBoard(positions[i]), this.notation.turnIndicesInPositionOnBoard(positions[i + 1])]
+                    this.checkers.checkMove(positions[i], positions[i + 1], notationRows[i], notationPositions);
+                    this.checkers.moveChecker(positions[i], positions[i + 1], );
+                }
                 this.switchPlayer();
             }
             this.notation.setCurrentValues();
@@ -80,7 +82,7 @@ export class Game {
         const parent = this.activeChecker.parentNode;
         const position = [+parent.dataset.row, +parent.dataset.col];
         this.startingPosition = [...position];
-        this.checkerWay.push({deleted: null, position: this.startingPosition});
+        this.checkerWay.push({deleted: null, position: this.startingPosition, isQueen: this.activeChecker.classList.contains('queen')});
        }
     }
 
@@ -117,9 +119,9 @@ export class Game {
                 const cell = this.view.getCellByIndex(way[i][0] * 8 + way[i][1])
                 if(cell.children[0]) {
                     this.view.deleteChecker(way[i][0], way[i][1]);
-                    this.checkerWay.push({deleted: deletedChecker, position: way[i]});
+                    this.checkerWay.push({deleted: deletedChecker, position: way[i], isQueen: this.activeChecker.classList.contains("queen")});
                 } else {
-                    this.checkerWay.push({deleted: null, position: way[i]});
+                    this.checkerWay.push({deleted: null, position: way[i], isQueen: this.activeChecker.classList.contains("queen")});
                 }
                 await this.view.moveChecker(this.activeChecker, cell);
                 this.view.removeAvailableCells();
@@ -154,6 +156,10 @@ export class Game {
             await this.view.moveChecker(this.activeChecker, cell);
             if(this.checkerWay[i].deleted) {
                 this.returnDeletedChecker(this.checkerWay[i].deleted, this.checkerWay[i].position);
+            }
+            if(this.checkerWay[i].isQueen && !this.checkerWay[i - 1].isQueen) {
+                this.view.removeQueen(this.activeChecker);
+                this.checkers.removeQueen(this.startingPosition);
             }
         }
         this.removeActiveChecker();

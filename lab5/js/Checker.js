@@ -8,8 +8,8 @@ export class Checker {
         }
     }
 
-    setQueen() {
-        this.isQueen = true;
+    setQueen(queen) {
+        this.isQueen = queen;
     }
 
     getIsQueen() {
